@@ -1,0 +1,670 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #4a403c;
+  background: #fffaf7;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+/* 3 ảnh*/
+/* =========================
+   SECTION CHÍNH
+========================= */
+
+.features {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 30px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   MỖI HÀNG
+========================= */
+
+.feature-row {
+  display: grid;
+
+  /* 2 cột bằng nhau */
+  grid-template-columns: 1fr 1fr;
+
+  /* khoảng cách giữa 2 cột */
+  gap: 80px;
+
+  /* căn giữa theo chiều dọc */
+  align-items: center;
+
+  /* khoảng cách giữa các hàng */
+  margin-bottom: 120px;
+}
+
+/* =========================
+   KHU VỰC ẢNH
+========================= */
+
+.feature-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ảnh */
+
+.feature-image img {
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+
+  display: block;
+
+  /* bo góc */
+  border-radius: 20px;
+
+  /* hiệu ứng đổ bóng */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+  /* hiệu ứng chuyển động */
+  transition: transform 0.4s ease;
+}
+
+/* =========================
+   ẢNH BÊN TRÁI
+========================= */
+
+.image-left img {
+  transform: rotate(17deg);
+}
+
+/* Khi rê chuột */
+
+.image-left img:hover {
+  transform: rotate(-1deg) scale(1.03);
+}
+
+/* =========================
+   ẢNH BÊN PHẢI
+========================= */
+
+.image-right img {
+  transform: rotate(-15deg);
+}
+
+/* Khi rê chuột */
+
+.image-right img:hover {
+  transform: rotate(2deg) scale(1.03);
+}
+
+/* =========================
+   NỘI DUNG
+========================= */
+
+.feature-content {
+  padding: 20px;
+}
+
+.feature-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+/*đien thoại phần 3 anh */
+@media (max-width: 768px) {
+  .features {
+    padding: 50px 20px;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  /*
+       Trên điện thoại:
+       luôn cho ảnh nằm trước content
+    */
+
+  .feature-image {
+    order: 1;
+  }
+
+  .feature-content {
+    order: 2;
+    text-align: center;
+  }
+
+  .feature-image img {
+    width: 85%;
+  }
+
+  .feature-content h2 {
+    font-size: 28px;
+  }
+
+  .feature-content p {
+    font-size: 16px;
+  }
+}
+.hero {
+  height: 100vh;
+  min-height: 650px;
+
+  background:
+    linear-gradient(rgba(60, 40, 35, 0.35), rgba(60, 40, 35, 0.35)),
+    url("/ANH_CUOI/DAU_TRANG.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  padding: 20px;
+}
+/*anh nhẫn*/
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subtitle,
+.small-title {
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(70px, 10vw, 130px);
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  font-size: 0.6em;
+}
+
+.date {
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+
+  color: white;
+  text-decoration: none;
+
+  border: 1px solid white;
+
+  padding: 13px 30px;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #4a403c;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  max-width: 850px;
+  margin: auto;
+
+  padding: 120px 25px;
+
+  text-align: center;
+}
+
+.small-title {
+  color: #a98272;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  font-weight: 300;
+
+  color: #6e5045;
+
+  margin-bottom: 25px;
+}
+
+.description {
+  max-width: 600px;
+  margin: auto;
+
+  color: #777;
+}
+
+.names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  margin-top: 60px;
+}
+
+.names h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+  font-weight: 400;
+}
+/*
+.nhan {
+  display: flex;
+  width: 100%;
+  background-image: url(/ANH_CUOI/NHAN.jpg);
+}*/
+.names p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.names > span {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  color: #b98d7d;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 600px;
+
+  background: #f3e9e3;
+}
+.fan {
+  /* position: relative: Cho phép các hình con sử dụng position: absolute và lấy .fan làm hệ tọa độ. */
+  position: relative;
+  width: 700px;
+  height: 500px;
+} /* ======================================== 4. STYLE CHUNG CHO 3 HÌNH ======================================== */
+.fan-image {
+  /* position: absolute: Các hình sẽ được đặt chồng lên cùng một khu vực. */
+  position: absolute;
+  width: 260px;
+  height: 360px; /* Giữ tỷ lệ hình ảnh và cắt phần dư nếu cần. */
+  object-fit: cover; /* Bo góc */
+  border-radius: 20px; /* Đổ bóng */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Tạo hiệu ứng chuyển động mượt */
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+} /* ======================================== 5. HÌNH TRUNG TÂM ======================================== */
+.image-center {
+  /* Đặt chính giữa container */
+  left: 50%;
+  top: 50%; /* Dịch ngược lại 50% kích thước để hình nằm chính giữa. */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Đưa hình trung tâm lên trên hai hình còn lại. */
+  z-index: 3;
+} /* ======================================== 6. HÌNH BÊN TRÁI ======================================== */
+.image-left {
+  /* Đặt hình về phía trái */
+  left: 50%;
+  top: 50%; /* Di chuyển sang trái và xuống một chút. */
+  transform: translate(-100%, -45%) rotate(-20deg); /* Nằm phía sau hình trung tâm */
+  z-index: 1;
+} /* ======================================== 7. HÌNH BÊN PHẢI ======================================== */
+.image-right {
+  /* Đặt hình về phía phải */
+  left: 50%;
+  top: 50%; /* Di chuyển sang phải và xoay theo hướng ngược lại. */
+  transform: translate(0%, -45%) rotate(20deg); /* Nằm phía sau hình trung tâm */
+  z-index: 1;
+} /* ======================================== 8. HIỆU ỨNG HOVER ======================================== */ /* Khi đưa chuột vào container, 3 hình mở rộng ra giống cánh quạt. */
+.fan:hover .image-left {
+  transform: translate(-110%, -45%) rotate(-28deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+.story-image {
+  background: url("/ANH_CUOI/NHAN.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.fan {
+  width: 900px;
+  height: 500px; /* Flexbox chia đều 3 vị trí */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Khoảng cách giữa các ảnh */
+  gap: 40px;
+} /* ======================================== STYLE CHUNG CHO ẢNH ======================================== */
+.fan-image {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Hiệu ứng chuyển động */
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+} /* ======================================== ẢNH TRÁI ======================================== */
+.image-left {
+  /* Nghiêng sang trái */
+  transform: rotate(-20deg);
+} /* ======================================== ẢNH GIỮA ======================================== */
+.image-center {
+  /* Không xoay */
+  transform: rotate(0deg); /* Đưa ảnh giữa lên trên */
+  z-index: 2;
+} /* ======================================== ẢNH PHẢI ======================================== */
+.image-right {
+  /* Nghiêng sang phải */
+  transform: rotate(20deg);
+} /* ======================================== HOVER ======================================== */
+.fan:hover .image-left {
+  transform: rotate(-28deg) translateY(-15px);
+}
+.fan:hover .image-center {
+  transform: scale(1.05) translateY(-15px);
+}
+.fan:hover .image-right {
+  transform: rotate(28deg) translateY(-15px);
+} /* ======================================== RESPONSIVE ======================================== */
+@media (max-width: 950px) {
+  .fan {
+    width: 95vw;
+    gap: 20px;
+  }
+  .fan-image {
+    width: 30%;
+    height: auto;
+    aspect-ratio: 260 / 360;
+  }
+}
+.story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 80px;
+}
+
+.story-content p:not(.small-title) {
+  max-width: 500px;
+  margin-bottom: 20px;
+  color: #756963;
+}
+
+/* =========================
+   EVENT
+========================= */
+
+.event {
+  padding: 120px 25px;
+
+  text-align: center;
+}
+
+.event-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.event-card {
+  background: white;
+
+  padding: 50px 30px;
+
+  box-shadow: 0 10px 40px rgba(80, 50, 40, 0.08);
+}
+
+.icon {
+  font-size: 35px;
+  color: #b98d7d;
+
+  margin-bottom: 20px;
+}
+
+.event-card h3 {
+  letter-spacing: 3px;
+  font-size: 15px;
+
+  margin-bottom: 20px;
+}
+
+.event-card hr {
+  width: 50px;
+
+  border: 0;
+  border-top: 1px solid #c8a99b;
+
+  margin: 25px auto;
+}
+
+.event-card p {
+  color: #777;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+  background: #6e5045;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 100px 20px;
+}
+
+.countdown h2 {
+  color: white;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+
+  gap: 60px;
+
+  margin-top: 50px;
+}
+
+.timer div {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer strong {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.timer span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+  max-width: 600px;
+
+  margin: auto;
+
+  padding: 120px 25px;
+
+  text-align: center;
+}
+
+.rsvp > p:not(.small-title) {
+  color: #777;
+
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+input,
+select {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid #ddd;
+
+  background: white;
+
+  font-family: inherit;
+
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #a98272;
+}
+
+button {
+  padding: 16px;
+
+  border: none;
+
+  background: #6e5045;
+
+  color: white;
+
+  cursor: pointer;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #a98272;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #f3e9e3;
+
+  text-align: center;
+
+  padding: 70px 20px;
+}
+
+footer h2 {
+  margin-bottom: 5px;
+}
+
+footer p {
+  color: #777;
+}
+
+.copyright {
+  margin-top: 25px;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    min-height: 400px;
+  }
+
+  .story-content {
+    padding: 70px 25px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timer {
+    gap: 25px;
+  }
+
+  .timer strong {
+    font-size: 30px;
+  }
+
+  .names {
+    gap: 20px;
+  }
+
+  .names h3 {
+    font-size: 38px;
+  }
+}
