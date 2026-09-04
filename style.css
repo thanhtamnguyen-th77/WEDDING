@@ -171,7 +171,7 @@ body {
 
   background:
     linear-gradient(rgba(60, 40, 35, 0.35), rgba(60, 40, 35, 0.35)),
-    url("/ANH_CUOI/DAU_TRANG.jpg");
+    url("ANH_CUOI/DAU_TRANG.jpg");
 
   background-size: cover;
   background-position: center;
@@ -193,7 +193,12 @@ body {
   height: auto;
   display: block;
 }
-
+.full-width-image-dau-re {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 25px;
+}
 .subtitle,
 .small-title {
   font-size: 12px;
